@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dist (build chiqish fayllari)
+dist/
+
+# dotenv konfiguratsiya fayllari
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code config (optional)
+.vscode/
+
+# Tailwind JIT temporary cache (if used)
+.tailwind/
+
+# Loglar
+*.log
+
+# IDE'lar uchun umumiy fayllar
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Local build artifacts
+*.local
