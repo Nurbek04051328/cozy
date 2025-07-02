@@ -62,16 +62,62 @@
           <a href="#home" class="navbar-link">Home</a>
         </li>
         <li>
-          <a href="#shop" class="navbar-link">Shop</a>
+          <button class="navbar-link">
+            Shop
+            <ion-icon name="caret-forward-outline" aria-hidden="true" class=""></ion-icon>
+          </button>
+          <div class="dropdown" data-dropdown>
+            <div class="dropdown-content">
+              <a href="#" class="">All Products</a>
+              <a href="#" class="">Clothing</a>
+              <a href="#" class="">Candles</a>
+              <a href="#" class="">Accessories</a>
+              <a href="#" class="">Bags</a>
+              <a href="#" class="">Clocks</a>
+              <a href="#" class="">SALE 🏷️</a>
+            </div>
+          </div>
         </li>
         <li>
-          <a href="#about" class="navbar-link">About</a>
+          <a href="#blog" class="navbar-link">Blog</a>
         </li>
         <li>
-          <a href="#contact" class="navbar-link">Contact</a>
+          <a href="#latest" class="navbar-link">Latest</a>
+        </li>
+        <li>
+          <a href="#info" class="navbar-link">Info</a>
         </li>
       </ul>
     </nav>
+
+    <div class="">
+      <button class="cart-toggler" aria-label="toggle cart" data-cart-toggler>
+        <span class="material-symbols-rounded" aria-hidden="true">
+          shopping_cart_checkout
+        </span>
+      </button>
+      <div class="">
+        <div class="cart-modal" data-cart-modal>
+          <ul>
+            <li class="">
+              <figure class="img-holder">
+                <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="cart1-image">
+              </figure>
+
+              <span class="text-wrapper">
+                <span class=""> 
+                  Handmade painted coffee mug
+                </span>
+
+                <div class="">
+                  <p class="product-ammount"></p>
+                </div>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
