@@ -46,25 +46,25 @@
   -header section
 -->
 <header class="header" data-header>
-  <div>
+  <div class="container relative justify-between items-center px-3 py-5 mx-auto">
     <a href="#" class="logo">
-      <img src="./assets/images/logo-light.svg" width="129" height="16" alt="CozyNest Logo">
+      <img src="./assets/images/logo-light.svg" width="129" height="16" alt="CozyNest Logo" class="xxl:w-40">
     </a>
-    <nav class="navbar" data-navbar>
+    <nav class="navbar active" data-navbar>
       <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
         <span class="material-symbols-rounded" aria-hidden="true">
           close
         </span>
       </button>
 
-      <ul class="navbar-list">
+      <ul class="md:flex md:items-center md:gap-3 xl:gap-7">
         <li>
           <a href="#home" class="navbar-link">Home</a>
         </li>
         <li>
-          <button class="navbar-link">
+          <button class="navbar-link flex items-center gap-2 min-w-full" aria-label="shop" data-dropdown-toggler>
             Shop
-            <ion-icon name="caret-forward-outline" aria-hidden="true" class=""></ion-icon>
+            <ion-icon name="caret-forward-outline" aria-hidden="true" class="duration-200 "></ion-icon>
           </button>
           <div class="dropdown" data-dropdown>
             <div class="dropdown-content">
@@ -104,20 +104,77 @@
                 <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="cart1-image">
               </figure>
 
-              <span class="text-wrapper">
+              <div class="text-wrapper">
                 <span class=""> 
                   Handmade painted coffee mug
                 </span>
 
                 <div class="">
-                  <p class="product-ammount"></p>
+                  <p class="product-ammount">1 x</p>
+
+                  <p class="price">$85.00</p>
                 </div>
-              </span>
+              </div>
+
+              <button class="" aria-label="remove product">
+                <span class="material-symbols-rounded" aria-hidden="true">
+                  close
+                </span>
+              </button>
             </li>
+
+            <div class="divider"></div>
+
+            <li class="">
+              <figure class="img-holder">
+                <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="cart1-image">
+              </figure>
+
+              <div class="text-wrapper">
+                <span class=""> 
+                  Handmade painted coffee mug
+                </span>
+
+                <div class="">
+                  <p class="product-ammount">1 x</p>
+
+                  <p class="price">$85.00</p>
+                </div>
+              </div>
+
+              <button class="" aria-label="remove product">
+                <span class="material-symbols-rounded" aria-hidden="true">
+                  close
+                </span>
+              </button>
+            </li>
+
+            <div class="divider"></div>
+
+            <div class="">
+              <a href="#" class="btn" aria-label="checkout">
+                checkout
+              </a>
+
+              <a href="#" class="btn btn-text" aria-label="view cart">
+                view cart
+              </a>
+            </div>
           </ul>
         </div>
       </div>
+
+      <button class="" aria-label="toggle menu" data-nav-toggler>
+        <span class="material-symbols-rounded" aria-hidden="true">
+          menu
+        </span>
+
+      </button>
+
+
     </div>
+
+    <div class="overlay" data-overlay></div>
   </div>
 </header>
 
