@@ -50,7 +50,7 @@
     <a href="#" class="logo">
       <img src="./assets/images/logo-light.svg" width="129" height="16" alt="CozyNest Logo" class="xxl:w-40">
     </a>
-    <nav class="navbar active" data-navbar>
+    <nav class="navbar" data-navbar>
       <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
         <span class="material-symbols-rounded" aria-hidden="true">
           close
@@ -68,13 +68,13 @@
           </button>
           <div class="dropdown" data-dropdown>
             <div class="dropdown-content">
-              <a href="#" class="">All Products</a>
+              <a href="#" class="pt-2">All Products</a>
               <a href="#" class="">Clothing</a>
               <a href="#" class="">Candles</a>
               <a href="#" class="">Accessories</a>
               <a href="#" class="">Bags</a>
               <a href="#" class="">Clocks</a>
-              <a href="#" class="">SALE 🏷️</a>
+              <a href="#" class="pb-2">SALE 🏷️</a>
             </div>
           </div>
         </li>
@@ -90,17 +90,17 @@
       </ul>
     </nav>
 
-    <div class="">
+    <div class="rounded-md overflow-hidden flex items-center gap-3 lg:fixed lg:top-5 lg:right-5">
       <button class="cart-toggler" aria-label="toggle cart" data-cart-toggler>
         <span class="material-symbols-rounded" aria-hidden="true">
           shopping_cart_checkout
         </span>
       </button>
-      <div class="">
-        <div class="cart-modal" data-cart-modal>
+      <div class="relative">
+        <div class="cart-modal active" data-cart-modal>
           <ul>
-            <li class="">
-              <figure class="img-holder">
+            <li class="flex gap-2 pr-2">
+              <figure class="img-holder" style="">
                 <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="cart1-image">
               </figure>
 
