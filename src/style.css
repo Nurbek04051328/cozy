@@ -19,7 +19,6 @@ html {
 }
 
 
-
 /* ----------- *\
   #REUSED STYLE
 \* ----------- */
@@ -42,6 +41,18 @@ ion-icon {
   aspect-ratio: var(--width) / var(--height);
 }
 
+.img-cover {
+  @apply h-full
+  w-full
+  object-cover;
+}
+
+.grid-list > li:nth-child(even):not(.off-card) {
+  @apply ms-auto
+
+  /* responsive for sm:635px screen */
+  sm:ms-0;
+}
 
 /*-------------------------*\
   #COMPONENTS
@@ -108,6 +119,124 @@ ion-icon {
   /* :hover */
   hover:text-butterscotch
 }
+
+
+/* Button */
+.btn {
+  @apply text-white
+  font-bold
+  uppercase
+  tracking-widest
+  text-sm
+  max-w-max
+  rounded-md
+  duration-200
+
+  /* hover */
+  hover:shadow-lg
+}
+
+.btn-text {
+   @apply text-caf_noir
+  ring-butterscotch
+  ring-1
+  
+  /* :hover */
+  hover:shadow-lg;
+}
+
+/* Card */
+.card {
+  @apply bg-cover
+  bg-no-repeat
+  bg-center
+  rounded-md
+  min-h-[219px]
+  py-5
+  px-5
+  
+  /* responsive for md:1000px screen */
+  md:min-h-[360px]
+  
+  /* responsive for lg:1200px screen */
+  lg:min-h-[219px];
+}
+
+/* Slider */
+.slider {
+  @apply relative
+  overflow-hidden;
+}
+
+.slider-item {
+  @apply bg-papaya_whip
+  absolute
+  top-0
+  left-0
+  overflow-hidden;
+  transition: left 0.5s cubic-bezier(0.645, 0.045, 0.354, 1);
+}
+
+.slider-item:nth-child(1) {
+  @apply left-[calc(-260px_+_-20px)];
+}
+
+.slider-item:nth-child(2) {
+  @apply left-0;
+}
+
+.slider-item:nth-child(3) {
+  @apply left-[calc(260px_+_20px)];
+}
+
+.slider-item:nth-child(4) {
+  @apply left-[calc((260px_+_20px)_*_2)];
+}
+
+.slider-item:nth-child(5) {
+  @apply left-[calc((260px_+_20px)_*_3)];
+}
+
+.slider-item:nth-child(6) {
+  @apply left-[calc((260px_+_20px)_*_4)];
+}
+
+.slider-item:nth-child(7) {
+  @apply left-[calc((260px_+_20px)_*_5)];
+}
+
+.slider-item:nth-child(8) {
+  @apply left-[calc((260px_+_20px)_*_6)];
+}
+
+.slider-item:nth-child(9) {
+  @apply left-[calc((260px_+_20px)_*_7)];
+}
+
+.slider-item:nth-child(10) {
+  @apply left-[calc((260px_+_20px)_*_8)];
+}
+
+/* Arrow button */
+.arrow-button {
+  @apply h-10
+  w-10
+  grid
+  place-items-center
+  border
+  border-solid
+  border-butterscotch
+  rounded-sm;
+}
+
+/* Avatar */
+.avatar {
+  @apply w-12
+  h-12
+  rounded-full
+  shrink-0;
+}
+
 
 /* ----------- *\
   #HEADER
@@ -276,6 +405,123 @@ ion-icon {
   opacity-100
 }
 
-/* .cart-modal .material-symbols-rounded {
+.cart-modal .material-symbols-rounded {
   font-variant-settings: "opsz" 20
-} */
+}
+
+
+
+/* Overlay */
+.overlay {
+  @apply fixed
+  inset-0
+  z-40
+  ease-inExpo
+  duration-75
+  invisible
+  opacity-0;
+}
+
+.overlay.active {
+  @apply visible
+  opacity-100
+  backdrop-blur-sm;
+}
+
+/*-------------------------*\
+  #HERO
+\*-------------------------*/
+
+.hero {
+  @apply bg-caf_noir
+  relative
+  pt-20;
+}
+
+@media (min-width: 1200px) {
+  .hero::before {
+    all: unset;
+  }
+}
+
+.hero .container {
+  /* response for lg:1200px screen */
+  @apply lg:grid
+  lg:grid-cols-2;
+}
+
+.hero-banner {
+  @apply absolute
+  inset-0
+  
+  /* responsive for lg:1200px screen */
+  lg:left-auto
+  lg:max-w-[50%];
+}
+
+.brand-list::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.brand-list-item {
+  @apply grid
+  place-content-center
+  p-2
+  h-14
+  min-w-32
+  rounded-md
+  cursor-pointer;
+}
+
+/*-------------------------*\
+  #TESTIMONIALS
+\*-------------------------*/
+
+.testimonial-card:nth-child(1) {
+  @apply left-[calc(-450px_+_-20px)]
+  
+  /* responsive for sm:635px screen */
+  sm:left-[calc(-580px_+_-30px)]
+  
+  /* responsive for md:1000px screen */
+  md:left-[calc(-756px_+_-30px)];
+}
+
+.testimonial-card:nth-child(2) {
+  @apply left-0;
+}
+
+.testimonial-card:nth-child(3) {
+  @apply left-[calc(450px_+_20px)]
+  
+  /* responsive for sm:635px screen */
+  sm:left-[calc(580px_+_30px)]
+  
+  /* responsive for md:1000px screen */
+  md:left-[calc(756px_+_30px)];
+}
+
+.testimonial-card:nth-child(4) {
+  @apply left-[calc((450px_+_20px)_*_2)]
+  
+  /* responsive for sm:635px screen */
+  sm:left-[calc((580px_+_30px)_*_2)]
+  
+  /* responsive for md:1000px screen */
+  md:left-[calc((756px_+_30px)_*_2)];
+}
+
+/*-------------------------*\
+  #FOOTER
+\*-------------------------*/
+
+.parallax {
+  @apply min-h-[300px]
+  bg-fixed
+  bg-center
+  bg-cover
+  bg-no-repeat
+  
+  /* responsive for xl:1400px screen */
+  xl:min-h-96;
+}
